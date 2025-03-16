@@ -1,6 +1,5 @@
 # Import python packages
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
 helpful_links = [
@@ -10,6 +9,9 @@ helpful_links = [
     "https://docs.snowflake.com/en/release-notes/streamlit-in-snowflake"
 ]
 
+
+cnx = st.conncection("snowflake")
+session = cnx.session()
 # Write directly to the app
 st.title("Customize Your Smoothie :cup_with_straw:")
 st.write("Replace the code in this example app with your own code! And if you're new to Streamlit, here are some helpful links:")
