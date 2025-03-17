@@ -10,7 +10,7 @@ helpful_links = [
 ]
 
 
-cnx = st.conncection("snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 # Write directly to the app
 st.title("Customize Your Smoothie :cup_with_straw:")
